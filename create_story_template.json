@@ -1,0 +1,21 @@
+{
+  "PROJECT_NAME": "TMS",
+  "STORY_NAME": "【CSA】示例Story标题",
+  "STORY_DESCRIPTION": "<p>【Biz Background】</p><p>业务背景描述</p><p><br/></p><p>【Enhancement&Solution】</p><p>方案描述</p><p><br/></p><p>【UAT】</p><p>* 验证点1</p><p>* 验证点2</p>",
+  "STORY_STATE": "Business Analysis",
+  "STORY_PRIORITY": 408,
+  "ITERATION_NAME": "I262",
+  "OWNER_NAME": "LUEC",
+  "BA_OWNER_NAME": "LUEC",
+  "Owner_BA": "Echo Lu",
+  "TMS Module": "Contract&Tariff",
+  "Group": "Group3",
+  "TMS Customer": "OCS",
+  "公共需求": "false",
+  "1.1_产品方向": "YES",
+  "1.2_紧急要求": "非常紧急",
+  "1.3_前置需求": "YES",
+  "1.4_频繁使用": "YES",
+  "UAT Type": "ByBA",
+  "估计人天": "0.1"
+}
