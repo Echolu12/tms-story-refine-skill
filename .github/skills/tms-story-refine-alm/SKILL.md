@@ -81,11 +81,15 @@ item_details_tool(ids=["<Story No>"], type="story")
 |------|----------|
 | ... | ... |
 
+**5. 原始参考数据**
+从原始 Description 中提取 Sample 数据（如接口报文示例、字段映射表、数据格式说明）和截图（`<img>` 标签），原样保留在 Key Description 之后，作为补充参考。
+
 #### 生成规则：
 - 遵循金字塔原理：结论先行，先"做什么"再"怎么做"
 - 分支逻辑必须拆分呈现，禁止合并为单条流程链
 - 语言客观精炼，保留关键业务术语和接口名称
 - 禁用"大概"、"可能"、"应该"等模糊词
+- **保留原始 Sample 数据和截图**：原始描述中的报文示例、数据样本、格式说明、截图等，放在 Key Description 末尾的「参考数据 & 截图」区域，不做删改
 
 ---
 
@@ -117,10 +121,14 @@ item_details_tool(ids=["<Story No>"], type="story")
 <table>...</table>
 <p><b>UAT 验证场景：</b></p>
 <table>...</table>
+<hr/>
+<h3>【参考数据 &amp; 截图】</h3>
+<p>...原样保留原始描述中的 Sample 报文、数据示例、截图等...</p>
 ```
 
 **更新规则**：
-- 保留【Biz Background】/【Current Situation】，用 Key Description 替代方案部分
+- 保留【Biz Background】/【Current Situation】，用 Key Description 替代方案部分的文字描述
+- **保留原始描述中的 Sample 数据和截图**，放在【参考数据 & 截图】区域
 - Story Name 末尾追加【byAI】标识
 - OWNER_NAME / BA_OWNER_NAME 使用 domain ID（如 LUEC）
 
@@ -140,6 +148,7 @@ update_story_mcp_tool(params={
 - 必须先获取原始 Description，不能凭空编造
 - 必须等待用户确认后才能更新 ALM
 - 保留背景，替代方案部分
+- **原始描述中的 Sample 数据（报文示例、字段映射等）和截图必须保留**，放在末尾【参考数据 & 截图】区域
 - Description 必须是 HTML 格式
 - 如果原始描述为空或过于简略，提醒用户补充信息
 

@@ -69,10 +69,14 @@ item_details_tool(ids=["<Story No>"], type="story")
 | 1 | ... |
 | 2 | ... |
 
+**4. 原始参考数据**
+从原始 Description 中提取 Sample 数据（如接口报文示例、字段映射表、数据格式说明）和截图（`<img>` 标签），原样保留在 Key Description 之后，作为补充参考。
+
 #### 生成规则：
 - 遵循金字塔原理：结论先行，先说"做什么"，再说"怎么做"
 - 分支逻辑必须拆分呈现，禁止将不同条件路径合并为一条流程链
 - 语言客观精炼，保留关键业务术语和接口名称
+- **保留原始 Sample 数据和截图**：原始描述中的报文示例、数据样本、格式说明、截图等，提取后放在 Key Description 末尾的「参考数据」区域，不做删改
 
 ---
 
@@ -107,12 +111,16 @@ item_details_tool(ids=["<Story No>"], type="story")
 <table>...</table>
 <p><b>UAT 验证场景：</b></p>
 <table>...</table>
+<hr/>
+<h3>【参考数据 &amp; 截图】</h3>
+<p>...原样保留原始描述中的 Sample 报文、数据示例、截图等...</p>
 ```
 
 **规则**：
 - 保留原始 Description 中的【Biz Background】/【Current Situation】部分
-- 用 Key Description **替代**原始的【方案】/【Enhancement & Solution】部分
-- 如果原始描述没有明确分区，则整体替换为：背景（精炼）+ Key Description
+- 用 Key Description **替代**原始的【方案】/【Enhancement & Solution】部分的文字描述
+- **保留原始描述中的 Sample 数据和截图**，放在【参考数据 & 截图】区域
+- 如果原始描述没有明确分区，则整体替换为：背景（精炼）+ Key Description + 参考数据
 - **Story Name 末尾添加【byAI】标识**，表示该 Story 已经 AI 加工
 
 **操作**：
@@ -133,4 +141,5 @@ update_story_mcp_tool(params={
 - 必须先获取原始 Description 再生成摘要，不能凭空编造
 - 必须等待用户确认后才能更新 ALM，不可自动更新
 - 更新时保留【Biz Background】，用 Key Description 替代方案部分
+- **原始描述中的 Sample 数据（报文示例、字段映射等）和截图必须保留**，放在末尾【参考数据 & 截图】区域
 - 如果原始 Description 为空或过于简略，提醒用户并询问是否需要补充信息
