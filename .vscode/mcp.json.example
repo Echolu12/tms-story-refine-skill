@@ -1,13 +1,12 @@
 {
-  "mcp": {
-    "servers": {
-      "alm-mcp-prd": {
-        "url": "https://alm-ai-gateway.digital.oocl.com:443/alm/v2/mcp",
-        "type": "http",
-        "headers": {
-          "api-key": "<YOUR_API_KEY_HERE>"
-        }
+  "servers": {
+    "alm-mcp-prd": {
+      "url": "https://alm-ai-gateway.digital.oocl.com:443/v2/mcp",
+      "type": "http",
+      "headers": {
+        "api-key": "<YOUR_API_KEY_HERE>"
       }
     }
-  }
+  },
+  "inputs": []
 }
