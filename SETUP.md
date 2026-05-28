@@ -1,15 +1,10 @@
 # Quick Setup
 
-1. Open terminal at repository root.
-2. Run:
-
-```powershell
-./setup.ps1
-```
-
-3. Enter the shared ALM MCP API key when prompted.
-4. Script generates local `.vscode/mcp.json` from `.vscode/mcp.json.example`.
+1. Copy `.vscode/mcp.json.example` to `.vscode/mcp.json`.
+2. Open `.vscode/mcp.json` and replace `<YOUR_API_KEY_HERE>` with the shared ALM MCP API key.
+3. Save the file.
+4. Reload VS Code window if MCP is not shown immediately.
 
 Notes:
 - `.vscode/mcp.json` is ignored by git and will not be uploaded.
-- If MCP is not shown immediately, reload VS Code window.
+- Keep the shared API key only in local `.vscode/mcp.json`.
