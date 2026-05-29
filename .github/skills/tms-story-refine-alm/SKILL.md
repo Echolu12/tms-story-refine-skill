@@ -59,6 +59,8 @@ item_details_tool(ids=["<Story No>"], type="story")
 
 #### 输出格式：
 
+**第一部分（最精简且最重要，不输出标题）**
+
 **1. 一句话总结**
 1-2句话高度概括需求本质。
 
@@ -66,6 +68,10 @@ item_details_tool(ids=["<Story No>"], type="story")
 分支独立列出，每条不超过5步：
 - 流程A：`条件 → 步骤1 → 步骤2 → 结果`
 - 流程B：`条件 → 步骤1 → 步骤2 → 结果`
+
+
+
+**【Others】（补充信息）**
 
 **3. 核心规则**
 5-7条最关键的业务规则（表格形式）：
@@ -86,6 +92,8 @@ item_details_tool(ids=["<Story No>"], type="story")
 
 #### 生成规则：
 - 遵循金字塔原理：结论先行，先"做什么"再"怎么做"
+- Key Description 分两大块：第一部分（1+2，不输出标题）和 `【Others】`（3+4+5）
+- 第一部分与 `【Others】` 之间必须空出几个空行，强调主次关系
 - 分支逻辑必须拆分呈现，禁止合并为单条流程链
 - **去重优先级**：先完整写关键流程，再写核心规则；凡是流程中已完整表达的逻辑，不得在核心规则重复出现
 - 核心规则仅写"跨分支、跨步骤仍成立"的全局约束，不写流程动作本身
@@ -104,7 +112,6 @@ item_details_tool(ids=["<Story No>"], type="story")
 
 **必须等待用户明确确认后才执行更新。**
 
----
 
 ### Step 5：更新 ALM Story
 
@@ -119,6 +126,8 @@ item_details_tool(ids=["<Story No>"], type="story")
 <p><b>一句话总结：</b>...</p>
 <p><b>关键流程：</b></p>
 <ul><li>...</li></ul>
+<br/><br/><br/>
+<p><b>【Others】</b></p>
 <p><b>核心规则：</b></p>
 <table>...</table>
 <p><b>UAT 验证场景：</b></p>
@@ -141,10 +150,6 @@ update_story_mcp_tool(params={
   "STORY_ID": "<Story No>",
   "STORY_NAME": "<原始 Story Name>【byAI】",
   "STORY_DESCRIPTION": "<重组后的完整 HTML>"
-})
-```
-
----
 
 ## Constraints
 
