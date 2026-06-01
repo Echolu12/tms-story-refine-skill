@@ -1,7 +1,7 @@
 {
   "PROJECT_NAME": "TMS",
   "STORY_NAME": "【CSA】示例Story标题",
-  "STORY_DESCRIPTION": "<p><b>【Biz Background】</b></p><p>说明当前业务背景、痛点和为什么需要该需求。</p><hr/><h3>【Enhancement &amp; Solution】</h3><p><b>一句话总结：</b>一句话概括需求目标与业务价值。</p><p><b>关键流程：</b></p><ul><li>流程A：条件 → 步骤1 → 步骤2 → 结果</li><li>流程B：条件 → 步骤1 → 步骤2 → 结果</li></ul><br/><br/><br/><p><b>【Others】</b></p><p><b>核心规则：</b></p><table border=\"1\" cellspacing=\"0\" cellpadding=\"6\"><tr><th>#</th><th>规则</th></tr><tr><td>1</td><td>...</td></tr></table><p><b>UAT 验证场景：</b></p><table border=\"1\" cellspacing=\"0\" cellpadding=\"6\"><tr><th>场景</th><th>预期结果</th></tr><tr><td>...</td><td>...</td></tr></table>",
+  "STORY_DESCRIPTION": "<p><b>【Biz Background】</b></p><p>说明当前业务背景、痛点和为什么需要该需求。</p><p><br/></p><h3>【Enhancement &amp; Solution】</h3><p><b>一句话总结：</b>一句话概括需求目标与业务价值。</p><p><b>关键流程：</b></p><ul><li>流程A：条件 → 步骤1 → 步骤2 → 结果</li><li>流程B：条件 → 步骤1 → 步骤2 → 结果</li></ul><br/><br/><br/><p><b>【Others】</b></p><p><b>核心规则：</b></p><table border=\"1\" cellspacing=\"0\" cellpadding=\"6\"><tr><th>#</th><th>规则</th></tr><tr><td>1</td><td>...</td></tr><tr><td>2</td><td>...</td></tr></table><p><b>UAT 验证场景：</b></p><table border=\"1\" cellspacing=\"0\" cellpadding=\"6\"><tr><th>场景</th><th>预期结果</th></tr><tr><td>...</td><td>...</td></tr></table>",
   "STORY_STATE": "Business Analysis",
   "STORY_PRIORITY": 408,
   "ITERATION_NAME": "I262",
